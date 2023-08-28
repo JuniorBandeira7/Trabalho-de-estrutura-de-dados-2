@@ -152,10 +152,12 @@ for i in dicionario:
 #arvore_avl.inserir(dicionario["xau"])
 #arvore_avl.inserir(dicionario["domingo"])
 #arvore_avl.inserir(dicionario["segundaa"])
+#print(arvore_avl._obter_balanceamento(arvore_avl.raiz)) verifica se arvore está balanceada
 palavra = input("Qual palavra quer buscar?: ")
 busca = arvore_avl.buscar_valor(palavra)
 
-
+if busca.valor[1] == None:
+    print("palavra não encontrada")
 print(f"Palavra encontrada: {busca.valor[0]}\n| Arquivo: {busca.valor[1]}  | Quantidade: {busca.valor[2]}")
 if len(busca.valor) > 3:
     print(f"| Arquivo: {busca.valor[3][1]} | Quantidade: {busca.valor[3][2]}")
